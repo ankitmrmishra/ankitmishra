@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Poor+Story&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -96,6 +99,24 @@ section {
 
 .active {
   display: block;
+  -webkit-animation: scaleAnim 1s ease-in;
+          animation: scaleAnim 1s ease-in;
+}
+@-webkit-keyframes scaleAnim {
+  0% {
+    transform: translateY(-100%) scaleY(0);
+  }
+  100% {
+    transform: translateY(0) scaleY(1);
+  }
+}
+@keyframes scaleAnim {
+  0% {
+    transform: translateY(-100%) scaleY(0);
+  }
+  100% {
+    transform: translateY(0) scaleY(1);
+  }
 }
 
 .controlls {
@@ -153,4 +174,192 @@ section {
 .home-sect .my-image .image .img-mine {
   width: 100%;
   height: 100%;
+}
+
+.header-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100%;
+}
+.header-content .left-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.header-content .left-header .h-shape {
+  transition: all 0.4s ease-in-out;
+  width: 65%;
+  height: 100%;
+  background-color: var(--color-secondary);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
+          clip-path: polygon(0 0, 0% 100%, 100% 100%);
+}
+.header-content .left-header .image {
+  border-radius: var(--br-sm-2);
+  width: 60%;
+  height: 90%;
+  margin-left: 4rem;
+}
+.header-content .left-header .image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s ease-in-out;
+  filter: grayscale(100%);
+}
+.header-content .left-header .image img:hover {
+  filter: grayscale(0);
+}
+.header-content .right-header {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 18rem;
+}
+.header-content .right-header .name {
+  font-size: 3.8rem;
+}
+.header-content .right-header .name span {
+  font-family: "Poor Story", cursive;
+  color: var(--color-secondary);
+}
+.header-content .right-header .para {
+  margin-top: 1.8rem;
+  font-size: 1.3rem;
+}
+
+.btn-content {
+  padding-top: 2rem;
+  display: flex;
+  align-self: flex-start;
+}
+.btn-content .btn {
+  border: var(--color-secondary);
+  color: white;
+  background-color: var(--color-primary);
+  border-radius: 30px;
+  font-size: 1rem;
+}
+.btn-content .btn:hover {
+  transform: translateX(0);
+  transition: all 0.4s ease-out;
+  border: var(--color-primary);
+}
+
+.main-btn {
+  border: solid 2.5px var(--color-secondary);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  overflow: hidden;
+  align-self: flex-start;
+}
+.main-btn .btn-text {
+  padding: 0 2.5rem;
+}
+.main-btn .btn-icon {
+  background-color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40%;
+  padding: 1.5rem;
+}
+.main-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition: all 0.4s ease-out;
+  z-index: -1;
+}
+.main-btn:hover {
+  transition: all 0.4s ease-out;
+}
+.main-btn:hover::before {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-secondary);
+  transform: translateX(0);
+  transition: all 0.4s ease-out;
+}
+
+.About {
+  font-family: "Roboto", sans-serif;
+}
+.About .abot-content .heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.7rem;
+}
+.About .abot-content .heading .bg-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.About .abot-content .heading .bg-txt {
+  z-index: -1000;
+  text-align: center;
+  font-size: 5rem;
+  margin-top: -5rem;
+  color: var(--color-grey-5);
+  font-weight: 900;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.About .abot-content .heading .head-text3 {
+  margin-top: -0.3rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 6rem;
+}
+.About .abot-content .about-content {
+  top: 14%;
+  position: absolute;
+  padding-right: 10rem;
+  display: flex;
+  margin-top: 6rem;
+}
+.About .abot-content .about-content .about-left {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.About .abot-content .about-content .about-right {
+  margin-left: 4rem;
+}
+.About .abot-content .about-content .about-right .stats-info {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+}
+.About .abot-content .about-content .about-right .stats-info .stat {
+  margin: 1rem;
+  height: 18rem;
+  border: 2px solid black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  box-shadow: 3px 3px 3px 3px #1c1f2e;
+}
+.About .abot-content .about-content .about-right .stats-info .stat:hover {
+  border: 2px solid var(--color-secondary);
+  transition: all 0.4s ease-out;
+}
+.About .abot-content .about-content .about-right .stats-info .stat1, .About .abot-content .about-content .about-right .stats-info .stat2, .About .abot-content .about-content .about-right .stats-info .stat3, .About .abot-content .about-content .about-right .stats-info .stat4 {
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
+}
+.About .abot-content .about-content .about-right .stats-info .stat1:hover, .About .abot-content .about-content .about-right .stats-info .stat2:hover, .About .abot-content .about-content .about-right .stats-info .stat3:hover, .About .abot-content .about-content .about-right .stats-info .stat4:hover {
+  top: -10px;
 }/*# sourceMappingURL=style.css.map */
