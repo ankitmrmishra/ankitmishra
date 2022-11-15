@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
 
 
 
@@ -238,8 +239,12 @@ section{
            font-size: 3.8rem; 
 
            span{
-            font-family: 'Poor Story', cursive;
+            font-family: 'Nabla', cursive;
             color: var(--color-secondary);
+
+            &:hover{
+                
+            }
            }
           
            
@@ -557,3 +562,11 @@ padding: 0 2.5rem;
     }
 }
 
+// EXTRA CSS
+
+.fa-hashnode{
+    color: blue;
+}
+.hashnode{
+    color: blue;
+}
