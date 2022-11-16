@@ -100,23 +100,27 @@ section {
 
 .active {
   display: block;
-  -webkit-animation: scaleAnim 1s ease-in;
-          animation: scaleAnim 1s ease-in;
+  -webkit-animation: animatebottom 2s;
+          animation: animatebottom 2s;
 }
-@-webkit-keyframes scaleAnim {
-  0% {
-    transform: translateY(-100%) scaleY(0);
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -300px;
+    opacity: 0;
   }
-  100% {
-    transform: translateY(0) scaleY(1);
+  to {
+    bottom: 0;
+    opacity: 1;
   }
 }
-@keyframes scaleAnim {
-  0% {
-    transform: translateY(-100%) scaleY(0);
+@keyframes animatebottom {
+  from {
+    bottom: -300px;
+    opacity: 0;
   }
-  100% {
-    transform: translateY(0) scaleY(1);
+  to {
+    bottom: 0;
+    opacity: 1;
   }
 }
 
@@ -510,4 +514,27 @@ section {
 
 .hashnode {
   color: blue;
+}
+
+.w3-animate-zoom {
+  -webkit-animation: animatezoom 0.6s;
+          animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }/*# sourceMappingURL=style.css.map */
