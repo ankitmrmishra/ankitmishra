@@ -10,8 +10,8 @@
 }
 
 :root {
-  --color-primary: #191d2b;
-  --color-secondary: #ffae00;
+  --color-primary: #2A0944;
+  --color-secondary: #EC994B;
   --color-white: #FFFFFF;
   --color-black: #000;
   --color-grey0: #f8f8f8;
@@ -300,6 +300,7 @@ section {
 
 .About {
   font-family: "Roboto", sans-serif;
+  scrollbar-color: var(--color-secondary);
 }
 .About .about-content {
   display: grid;
@@ -479,6 +480,195 @@ section {
 }
 .timeline .timeline-item p {
   color: var(--color-grey-2);
+}
+
+.port-text {
+  padding: 5rem 0;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+}
+
+.portfolios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-top: 0rem;
+}
+.portfolios .portfolio-item {
+  position: relative;
+  border-radius: 15px;
+}
+.portfolios .portfolio-item img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+  background-color: var(--color-secondary);
+}
+.portfolios .portfolio-item .hover-items {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-secondary);
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.4s ease-in-out;
+}
+.portfolios .portfolio-item .hover-items h3 {
+  font-size: 1.5rem;
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.portfolios .portfolio-item .hover-items .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.portfolios .portfolio-item .hover-items .icons .icon {
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.portfolios .portfolio-item .hover-items .icons .icon i {
+  font-size: 1.5rem;
+  color: var(--color-white);
+  margin: 0 1rem;
+}
+.portfolios .portfolio-item .hover-items .icons .icon:hover {
+  background-color: var(--color-white);
+}
+.portfolios .portfolio-item .hover-items .icons .icon:hover i {
+  color: var(--color-primary);
+}
+
+.portfolio-item:hover .hover-items {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.blog-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-top: 4rem;
+}
+.blog-content .blog {
+  position: relative;
+  background-color: var(--color-grey-5);
+  border-radius: 5px;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease-in-out;
+}
+.blog-content .blog:hover {
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+  transition: all 0.4s ease-in-out;
+}
+.blog-content .blog:hover img {
+  filter: grayscale(0);
+  transform: scale(1.1);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
+}
+.blog-content .blog img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  filter: grayscale(100%);
+  transition: all 0.4s ease-in-out;
+  background-color: var(--color-secondary);
+}
+.blog-content .blog .blog-text {
+  margin: 2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.blog-content .blog .blog-text h4 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.blog-content .blog .blog-text h4:hover {
+  cursor: pointer;
+  color: var(--color-primary);
+}
+.blog-content .blog .blog-text p {
+  color: var(--color-grey-3);
+  line-height: 2rem;
+}
+
+.content-main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  margin-top: 6rem;
+}
+.content-main .contact-left h1 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.content-main .contact-left .details {
+  margin-top: 3rem;
+}
+.content-main .contact-left .details i {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+.content-main .contact-left .details i span {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+.content-main .contact-left .socials {
+  margin: 3rem 3rem;
+}
+.content-main .contact-left .socials i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-grey-5);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  color: var(--color-white);
+  margin: 0 1rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.content-main .contact-left .socials i:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+.content-main .contact-right textarea {
+  border-radius: 30px;
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0.8rem 1.1rem;
+  outline: none;
+  border: none;
+  background-color: var(--color-grey-5);
+  width: 100%;
+  color: var(--color-white);
+  resize: none;
 }
 
 .main-title {

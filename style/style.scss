@@ -14,8 +14,8 @@
 }
 
 :root{
-    --color-primary: #191d2b;
-    --color-secondary: #ffae00;
+    --color-primary: #2A0944;
+    --color-secondary: #EC994B;
     --color-white: #FFFFFF;
     --color-black: #000;
     --color-grey0: #f8f8f8;
@@ -328,6 +328,7 @@ padding: 0 2.5rem;
 // Here Starts The About Section
 .About{
     font-family: 'Roboto', sans-serif;
+    scrollbar-color: var(--color-secondary);
 
    
        
@@ -520,6 +521,210 @@ padding: 0 2.5rem;
         color: var(--color-grey-2);
     }
   }
+}
+
+// portfolio
+
+.port-text{
+    padding: 5rem 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+}
+.portfolios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin-top: 0rem;
+    .portfolio-item {
+        position: relative;
+        border-radius: 15px;
+        img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            background-color: var(--color-secondary);
+        }
+        .hover-items {
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-secondary);
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            opacity: 0;
+            transform: scale(0);
+            transition: all .4s ease-in-out;
+            h3 {
+                font-size: 1.5rem;
+                color: var(--color-white);
+                margin-bottom: 1.5rem;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            .icons {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .icon {
+                    background-color: var(--color-primary);
+                    border-radius: 50%;
+                    width: 50px;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 1rem;
+                    cursor: pointer;
+                    transition: all .4s ease-in-out;
+                    i {
+                        font-size: 1.5rem;
+                        color: var(--color-white);
+                        margin: 0 1rem;
+                    }
+                    &:hover {
+                        background-color: var(--color-white);
+                        i { color: var(--color-primary); }
+                    }
+                }
+            }
+        }
+    }
+}
+.portfolio-item:hover .hover-items {
+    opacity: 1;
+    transform: scale(1);
+}
+
+// blogs 
+.blog-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin-top: 4rem;
+    .blog{
+        position: relative;
+        background-color: var(--color-grey-5);
+        border-radius: 5px;
+        box-shadow: 1px 1px 20px rgba(0,0,0,.1);
+        transition: all .4s ease-in-out;
+
+        &:hover {
+            box-shadow: 1px 1px 20px rgba(0,0,0,.3);
+            transform: translateY(-5px);
+            transition: all .4s ease-in-out;
+            img {
+                filter: grayscale(0);
+                transform: scale(1.1);
+                box-shadow: 0px 4px 15px rgba(0,0,0,0.8);
+            }
+        }
+        img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            filter: grayscale(100%);
+            transition: all .4s ease-in-out;
+            background-color: var(--color-secondary);
+        }
+        .blog-text{
+            margin: 2rem;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            h4{
+                margin-bottom: 2rem;
+                font-size: 2rem;
+                &:hover{
+                    cursor:pointer;
+                        color: var(--color-primary);
+                    
+                }
+            }
+            p{
+                color: var(--color-grey-3);
+                line-height: 2rem;
+            }
+           
+        }
+    }
+    
+}
+.content-main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap:2rem;
+    margin-top: 6rem;
+
+    .contact-left{
+
+        h1{
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+        .details{
+            margin-top: 3rem;
+
+            i{
+                margin-top: 1rem;
+                    font-size: 1.5rem;
+                    span{
+                        font-size: 1rem;
+                        font-family: 'Roboto', sans-serif;
+                        
+                    }
+            }
+        }
+        .socials{
+           
+            
+            margin: 3rem 3rem;
+           
+            i {
+                display: flex;
+            align-items: center;
+            justify-content: center;
+                background-color: var(--color-grey-5);
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                font-size: 2rem;
+                color: var(--color-white);
+                margin: 0 1rem;
+                cursor: pointer;
+                transition: all .4s ease-in-out;
+                &:hover {
+                    background-color: var(--color-white);
+                      color: var(--color-primary); 
+                }
+            }
+           
+        }
+
+    }
+.contact-right{
+    
+    textarea{
+        border-radius: 30px;
+        font-weight: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        padding: .8rem 1.1rem;
+        outline: none;
+        border: none;
+        background-color: var(--color-grey-5);
+        width: 100%;
+        color: var(--color-white);
+        resize: none;
+    }
+}
 }
 
 //  independent 
