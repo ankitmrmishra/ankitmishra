@@ -602,6 +602,15 @@ section {
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease-in-out;
 }
+.blog-content .blog img {
+  width: 100%;
+  height: 10rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  filter: grayscale(100%);
+  transition: all 0.4s ease-in-out;
+  background-color: var(--color-secondary);
+}
 .blog-content .blog:hover {
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
   transform: translateY(-5px);
@@ -611,17 +620,6 @@ section {
   filter: grayscale(0);
   transform: scale(1.1);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
-}
-.blog-content .blog img {
-  width: 100%;
-  height: inherit;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  filter: grayscale(100%);
-  transition: all 0.4s ease-in-out;
-  background-color: var(--color-secondary);
 }
 .blog-content .blog .blog-text {
   margin: 2rem;
