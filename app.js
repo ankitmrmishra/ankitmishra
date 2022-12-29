@@ -2,7 +2,11 @@ const sections = document.querySelectorAll('.section');
 const sectBtns = document.querySelectorAll('.controlls');
 const sectBtn = document.querySelectorAll('.control');
 const allSections = document.querySelector('.main-content');
-const themebutton = document.querySelector('.fas fa-moon');
+const themebutton = document.getElementById('theme');
+const tb = document.querySelector('.theme-btn')
+
+
+
 
 
 function PageTransitions(){
@@ -36,10 +40,11 @@ function PageTransitions(){
     })
 
     //Toggle theme
-    const themeBtn = document.querySelector('.theme-btn');
-    themeBtn.addEventListener('click',(e) =>{
+   
+    tb.addEventListener('click',(e) =>{
         let element = document.body;
         element.classList.toggle('light-mode')
+        themebutton.classList.toggle('fa-moon')
         
       
         
@@ -48,7 +53,9 @@ function PageTransitions(){
 
 PageTransitions();
 
-function iconToggle(x) {
-    x.classList.toggle("fa-moon");
+// tb.addEventListener('click' , () => {
 
-} 
+// })
+    
+
+
